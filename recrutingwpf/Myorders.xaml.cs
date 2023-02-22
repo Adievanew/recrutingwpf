@@ -10,18 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace recrutingwpf
 {
     /// <summary>
-    /// Логика взаимодействия для Profile.xaml
+    /// Логика взаимодействия для Myorders.xaml
     /// </summary>
-    public partial class Profile : Window
+    public partial class Myorders : Page
     {
-        public Profile()
+        public static Frame Frame { get; set; }
+        int Id;
+        public Myorders()
         {
             InitializeComponent();
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -4,19 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-namespace recrutingwpf.Models
+namespace recrutingwpf
 {
-    internal class RecrutContext :DbContext 
+    internal class RecrutContext : DbContext
     {
+        public RecrutContext() {}
         public DbSet<Users> users { get; set; }
-        public DbSet<Roles> Roles { get; set; }
+        public DbSet<Roles> roles { get; set; }
 
-        public DbSet <Hirer> Hirers { get; set; }
-        public DbSet<Applicant> Applicants { get; set; }
-        public DbSet<Image> Images { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet <Hirer> hirer { get; set; }
+        public DbSet<Applicant> applicant { get; set; }
+        public DbSet<Image> image { get; set; }
+        public DbSet<Order> orders { get; set; }
 
-        public DbSet<Response> Responses { get; set; }
+        public DbSet<Response> response { get; set; }
 
         private static RecrutContext context;
         public static RecrutContext GetContext()
@@ -27,23 +28,24 @@ namespace recrutingwpf.Models
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("public");
-            modelBuilder.Entity<Users>()
-        .HasOne(a => a.Applicant).WithOne(b => b.User)
-        .HasForeignKey<Applicant>(e => e.Id);
-            modelBuilder.Entity<Users>()
-        .HasOne(a => a.Hirer).WithOne(b => b.User)
-        .HasForeignKey<Hirer>(e => e.Id);
-            modelBuilder.Entity<Order>().ToTable("Order");
-            modelBuilder.Entity<Order>().Property(g => g.Id).ValueGeneratedOnAdd().UseIdentityColumn();
-            modelBuilder.Entity<Order>().HasMany(s => s.Responses).WithOne(a => a.OrderId);
-            modelBuilder.Entity<Response >().ToTable("Response");
-            modelBuilder.Entity<Response>().Property(g => g.Id).ValueGeneratedOnAdd().UseIdentityColumn();
-
+            //modelBuilder.HasDefaultSchema("public");
+            //modelBuilder.Entity<Users>().HasOne(a => a.Applicant).WithOne(b => b.User).HasForeignKey<Applicant>(e => e.id);
+            //modelBuilder.Entity<Users>().HasOne(a => a.Hirer).WithOne(b => b.User).HasForeignKey<Hirer>(e => e.id);
+            //modelBuilder.Entity<Order>().ToTable("orders");
+            //modelBuilder.Entity<Order>().Property(g => g.id).ValueGeneratedOnAdd().UseIdentityColumn();
+            //modelBuilder.Entity<Order>().HasMany(s => s.Responses).WithOne(a => a.Order);
+            //modelBuilder.Entity<Response>().ToTable("response");
+            //modelBuilder.Entity<Response>().Property(g => g.id).ValueGeneratedOnAdd().UseIdentityColumn();
+            //modelBuilder.Entity<Applicant>().HasMany(s => s.Images).WithOne(a => a.App);
+            //modelBuilder.Entity<Image>().ToTable("image");
+            //modelBuilder.Entity<Image>().Property(g => g.id).ValueGeneratedOnAdd().UseIdentityColumn();
+            //modelBuilder.Entity<Applicant>().HasMany(s => s.Responses).WithOne(a => a.App);
+            //modelBuilder.Entity<Response>().ToTable("response");
+            //modelBuilder.Entity<Response>().Property(g => g.id).ValueGeneratedOnAdd().UseIdentityColumn();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Dbrecrut;Username=postgres;Password=aiguladieva");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=aiguladieva;Database=DBrecrut_1");
         }
     }
 }

@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace recrutingwpf.Models
+namespace recrutingwpf
 {
-    internal class Order
+    public class Order
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int PaymentCost { get; set; }
-        public string Description { get; set; }
-        public int HirerId { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int paymentcost { get; set; }
+        public string description { get; set; }
+        public int hirerid { get; set; }
         public virtual Hirer Hirer { get; set; }
-
-        public List<Response> Responses { get; set; }
+        public virtual List<Response> Responses { get; set; } = new List<Response>();
     }
 }

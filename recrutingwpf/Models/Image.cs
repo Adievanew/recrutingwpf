@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace recrutingwpf.Models
+namespace recrutingwpf
 {
-    internal class Image
+    public class Image
     {
-        public int Id { get; set; }
-        public string ImagePath { get; set; }
-        public int AppId { get; set; }
+        public int id { get; set; }
+        public string imagepath { get; set; }
+        public int appid { get; set; }
         public virtual Applicant App { get; set; }
+       
     }
 }

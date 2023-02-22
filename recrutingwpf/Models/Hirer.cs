@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace recrutingwpf.Models
+﻿namespace recrutingwpf
 {
-    internal class Hirer
+    public class Hirer
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Adress { get; set; }
-        public string Description { get; set; }
-        public string Email { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string adress { get; set; }
+        public string description { get; set; }
+        public string email { get; set; }
+        public string imageavatar { get; set; }
+
+        public int UserId { get; set; }
         public virtual Users User { get; set; }
     }
 }

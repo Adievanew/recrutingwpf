@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using recrutingwpf;
@@ -9,9 +10,10 @@ using recrutingwpf;
 namespace recrutingwpf.Migrations
 {
     [DbContext(typeof(RecrutContext))]
-    partial class RecrutContextModelSnapshot : ModelSnapshot
+    [Migration("20230222132801_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

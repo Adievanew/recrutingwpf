@@ -1,0 +1,93 @@
+﻿<Window x:Class="recrutingwpf.MenuHirer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:recrutingwpf"
+        mc:Ignorable="d"
+        Title="MenuHirer" Height="450" Width="800">
+    <Window.Resources>
+        <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
+        <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="White" Opacity="0.2" />
+        <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="White" Opacity="0.1" />
+
+        <Style x:Key="HamburguerRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonHoverBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonPressedBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonCheckedBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="PointerFocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid Name="BackgroundGrid" Background="Transparent" Margin="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock FontSize="16" Height="16" Text="{TemplateBinding Tag}" FontFamily="Segoe MDL2 Assets" Margin="0,16" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <DockPanel >
+            <Menu Background="Gray"  DockPanel.Dock="Left" Width="112" >
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мой профиль"  Tag="&#xECA7;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile" Margin="0,0,-101.2,0" FontSize="16" Checked="Profile_Checked"></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мои работы" Tag="&#xECCD;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile1" Margin="0,0,-101.2,0" Checked="Profile1_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Вакансии" Tag="&#xF0E3;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile2" Margin="0,0,-101.2,0" Checked="Profile2_Checked" ></RadioButton>
+               <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Выйти" Tag="&#xE10F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile4" Margin="0,0,-101.2,0" Checked="Profile4_Checked" ></RadioButton>
+
+            </Menu>
+            <Frame x:Name="mainFrame" Background="#FFB5D5CA" NavigationUIVisibility="Hidden" Margin="0,0,0,-0.4" Width="681"/>
+        </DockPanel>
+    </Grid>
+
+</Window>
