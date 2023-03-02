@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
-using recrutingwpf.Gs;
+
 
 namespace recrutingwpf
 {
@@ -30,6 +30,7 @@ namespace recrutingwpf
             InitializeComponent();
             User = RecrutContext.GetContext().applicant.Where(p => p.id == id).FirstOrDefault();
             this.DataContext = User;
+            
         }
 
       
@@ -44,7 +45,7 @@ namespace recrutingwpf
                 string s = Environment.CurrentDirectory;
 
                 File.Copy(openFileDialog.FileName, @"C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resourses\" + System.IO.Path.GetFileName(openFileDialog.FileName));
-                User.imageavatar = System.IO.Path.GetFileName(openFileDialog.FileName);
+                User.imageavatar = System.IO.Path.GetFullPath (openFileDialog.FileName);
                 this.DataContext = null;
                 this.DataContext = User;
             }
@@ -56,6 +57,7 @@ namespace recrutingwpf
             try
             {
                 RecrutContext.GetContext().SaveChanges();
+                MessageBox.Show("Изменения сохранены!");
             }
             catch
             {

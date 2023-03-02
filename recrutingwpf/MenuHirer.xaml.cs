@@ -35,7 +35,7 @@ namespace recrutingwpf
 
         private void Profile1_Checked(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(new Myorders(Id));
         }
 
         private void Profile2_Checked(object sender, RoutedEventArgs e)
@@ -43,14 +43,12 @@ namespace recrutingwpf
 
         }
 
-        private void Profile3_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Profile4_Checked(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            MainWindow m = new MainWindow();
+            m.Show();
         }
     }
 }

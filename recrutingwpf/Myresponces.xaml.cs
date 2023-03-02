@@ -20,9 +20,15 @@ namespace recrutingwpf
     /// </summary>
     public partial class Myresponces : Page
     {
-        public Myresponces()
+        internal Hirer hirer { get; set; }
+        public int app;
+        internal Response resp { get; set; } = new Response();
+        public Myresponces(int id)
         {
             InitializeComponent();
+            var currentOrders = RecrutContext.GetContext().response.Where(p => p.OrderId == id).ToList(); ;
+            ListImage.ItemsSource = currentOrders;
+            app = id;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

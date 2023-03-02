@@ -23,7 +23,7 @@ namespace recrutingwpf
     public partial class MyImages : Page
     {
         internal List<Image> images { get; set; }
-        internal Image image { get; set; } = new Image();
+      
         int Id;
         public MyImages(int id)
         {
@@ -41,15 +41,17 @@ namespace recrutingwpf
             openFileDialog.ShowDialog();
             if (openFileDialog.FileName != "")
             {
+                Image image = new Image();
+
                 string s = Environment.CurrentDirectory;
 
-                File.Copy(openFileDialog.FileName, @"C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resourses1\" + System.IO.Path.GetFileName(openFileDialog.FileName));
-                
-                
-                image.imagepath = System.IO.Path.GetFileName(openFileDialog.FileName);
+                File.Copy(openFileDialog.FileName, @"C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resourses\" + System.IO.Path.GetFileName(openFileDialog.FileName));
+                 
+
+                image.imagepath = System.IO.Path.GetFullPath(openFileDialog.FileName);
                 image.appid = Id;
                 this.DataContext = null;
-                this.DataContext = RecrutContext.GetContext().image.ToList();//Where(p => p.appid  == id).ToList();;
+                this.DataContext = RecrutContext.GetContext().image.Where(p => p.appid  == Id).ToList();;
 
                 if (image.id == 0)
                 {

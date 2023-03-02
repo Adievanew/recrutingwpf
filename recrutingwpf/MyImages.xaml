@@ -15,7 +15,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="ListImage" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center"   Grid.Row="1" >
+        <ListView x:Name="ListImage" ScrollViewer.HorizontalScrollBarVisibility="Disabled"   Grid.Row="1"  >
             <ListView.ItemsPanel>
 
                 <ItemsPanelTemplate >

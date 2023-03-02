@@ -32,7 +32,7 @@
         <TextBox Grid.Column="3" Grid.Row=" 1"  HorizontalAlignment="Left" Margin="36.8,31.6,0,0" TextWrapping="Wrap" Text="{Binding email }" VerticalAlignment="Top" Width="203" Height="26"/>
         <TextBox Grid.Column="3" Grid.Row=" 2" HorizontalAlignment="Left" Margin="36.8,32,0,0" TextWrapping="Wrap" Text="{Binding adress }" VerticalAlignment="Top" Width="203" Height="26"/>
         <TextBox Grid.Column="3" Grid.Row=" 3" HorizontalAlignment="Left" Margin="36.8,10.4,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="203" Height="74"/>
-        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click" Grid.Column="3" HorizontalAlignment="Left" Margin="36.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="203" Height="46"/>
+        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click_1" Grid.Column="3" HorizontalAlignment="Left" Margin="36.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="203" Height="46"/>
         <Button Content="Изменить фото" Style="{StaticResource RoundCorner}" Click="Button_Click" HorizontalAlignment="Left" Margin="4.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="213" Height="46" Grid.Column="1"/>
 
     </Grid>

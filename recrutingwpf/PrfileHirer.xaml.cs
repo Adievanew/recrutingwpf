@@ -39,14 +39,25 @@ namespace recrutingwpf
             {
                 string s = Environment.CurrentDirectory;
 
-                File.Copy(openFileDialog.FileName, @"C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resources" + System.IO.Path.GetFileName(openFileDialog.FileName));
-
-                User.imageavatar = System.IO.Path.GetFileName(openFileDialog.FileName);
+                File.Copy(openFileDialog.FileName, @"C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resourses\" + System.IO.Path.GetFileName(openFileDialog.FileName));
+                User.imageavatar = System.IO.Path.GetFullPath(openFileDialog.FileName);
                 this.DataContext = null;
                 this.DataContext = User;
             }
         }
 
-       
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (User.id == 0) RecrutContext.GetContext().hirer.Add(User);
+            try
+            {
+                RecrutContext.GetContext().SaveChanges();
+                MessageBox.Show("Изменения сохранены!");
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все необходимые поля");
+            }
+        }
     }
 }

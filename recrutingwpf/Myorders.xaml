@@ -17,8 +17,8 @@
 
 
         </Grid.ColumnDefinitions>
-        <Button Content=" Добавить вакансию" Style="{StaticResource RoundCorner}" Margin="244,0,233,0.2"></Button>
-        <ListView x:Name="ListImage" Grid.Row=" 1"  >
+        <Button Content=" Добавить вакансию" Style="{StaticResource RoundCorner}" Margin="244,0,233,0.2" Click="Button_Click_1"></Button>
+        <ListView x:Name="ListImage" Grid.Row=" 1" MouseDoubleClick="ListImage_MouseDoubleClick" >
             <ListView.ItemTemplate>
                 <DataTemplate  >
                     <Grid Margin="20" Width="400"  >
@@ -35,9 +35,9 @@
                         </Grid.ColumnDefinitions>
                         <Image x:Name="ImageAvatarHirer" Source = "{Binding Hirer.imageavatar}"   Height="80"  VerticalAlignment="Top" Width="80" Grid.Row="0" Grid.Column="0"/>
                         <TextBlock x:Name="NameofHirer" Grid.Row=" 0" Grid.Column=" 0" Text="{Binding Hirer.name}"></TextBlock>
-                        <TextBlock  Grid.Row="0" Grid.Column=" 1" Text="{ Binding name}"></TextBlock>
-                        <TextBlock  Grid.Row=" 0" Grid.Column="2" Text="{ Binding paymentcost}"></TextBlock>
-                        <TextBlock  Grid.Row=" 1" Grid.Column=" 1"  Text="{ Binding description}"></TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column=" 1" TextWrapping="Wrap" Text="{ Binding name}"></TextBlock>
+                        <TextBlock  Grid.Row=" 0" Grid.Column="2" TextWrapping="Wrap" Text="{ Binding paymentcost}"></TextBlock>
+                        <TextBlock  Grid.Row=" 1" Grid.Column=" 1" TextWrapping="Wrap" Text="{ Binding description}"></TextBlock>
                       
                     </Grid>
                 </DataTemplate>

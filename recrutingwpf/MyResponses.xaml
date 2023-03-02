@@ -34,9 +34,9 @@
                         </Grid.ColumnDefinitions>
                         <Image x:Name="ImageAvatarHirer" Source = "{Binding Hirer.imageavatar}"   Height="80"  VerticalAlignment="Top" Width="80" Grid.Row="0" Grid.Column="0"/>
                         <TextBlock x:Name="NameofHirer" Grid.Row=" 0" Grid.Column=" 0" Text="{Binding Hirer.name}"></TextBlock>
-                        <TextBlock  Grid.Row="0" Grid.Column=" 1" Text="{ Binding Order.name}"></TextBlock>
-                        <TextBlock  Grid.Row=" 0" Grid.Column="2" Text="{ Binding Order.paymentcost}"></TextBlock>
-                        <TextBlock  Grid.Row=" 1" Grid.Column=" 1"  Text="{ Binding Order.description}"></TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column=" 1" TextWrapping="Wrap" Text="{ Binding Order.name}"></TextBlock>
+                        <TextBlock  Grid.Row=" 0" Grid.Column="2" TextWrapping="Wrap" Text="{ Binding Order.paymentcost}"></TextBlock>
+                        <TextBlock  Grid.Row=" 1" Grid.Column=" 1" TextWrapping="Wrap"  Text="{ Binding Order.description}"></TextBlock>
                         <Button Content="Отменить отклик" Grid.Column="2" Grid.Row=" 1" HorizontalAlignment="Left"  Style="{StaticResource RoundCorner}" VerticalAlignment="Center" Width="100"  Click="Button_Click"  Height="20"/>
 
                     </Grid>
