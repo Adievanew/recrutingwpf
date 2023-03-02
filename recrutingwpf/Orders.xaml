@@ -33,7 +33,7 @@
                             <ColumnDefinition Width="200" ></ColumnDefinition>
                             
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="ImageAvatarHirer" Source = "{Binding Hirer.imageavatar}"   Height="80"  VerticalAlignment="Top" Width="80" Grid.Row="0" Grid.Column="0"/>
+                        <Image x:Name="ImageAvatarHirer" Source = "{Binding Hirer.imageavatar}"   Height="auto"  VerticalAlignment="Top" Width="auto" Grid.Row="0" Grid.Column="0"/>
                         <TextBlock x:Name="NameofHirer" Grid.Row=" 0" Grid.Column=" 0" Text="{Binding Hirer.name}"></TextBlock>
                         <TextBlock  Grid.Row="0" Grid.Column=" 1" Text="{ Binding name}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ></TextBlock>
                         <TextBlock  Grid.Row=" 0" Grid.Column="2" Text="{ Binding paymentcost}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>

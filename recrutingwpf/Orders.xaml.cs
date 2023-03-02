@@ -20,8 +20,8 @@ namespace recrutingwpf.Resourses
     /// </summary>
     public partial class Orders : Page
     {
-        internal Hirer hirer { get; set; }
-        int app;
+        
+       public int app;
         internal Response resp { get; set; } = new Response();
         public Orders(int id)
         {

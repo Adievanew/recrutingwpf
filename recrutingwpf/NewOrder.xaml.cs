@@ -20,32 +20,37 @@ namespace recrutingwpf
     /// </summary>
     public partial class NewOrder : Page
     {
-        internal Response response { get; set; }
-        public NewOrder(int id)
+        internal Order order { get; set; }
+        public int IdH;
+        public NewOrder(int idorder, int idhirer)
         {
             InitializeComponent();
-            response  = RecrutContext.GetContext().response.Where(p => p.id == id).FirstOrDefault();
-            this.DataContext = response;
+            order = RecrutContext.GetContext().orders.Where(p => p.id == idorder).FirstOrDefault();
+            this.DataContext = order;
+            IdH = idhirer;
         }
-        public NewOrder ()
+        public NewOrder (int idhirer)
         {
             InitializeComponent();
-            response  = new Response ();
-            this.DataContext = response ;
+            order  = new Order ();
+            this.DataContext = order ;
+            IdH = idhirer;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (response.id == 0) RecrutContext.GetContext().response.Add(response );
-            try
-            {
+           
+            //try
+            //{
+                if (order.id == 0) RecrutContext.GetContext().orders.Add(order);
+                order.hirerid = IdH;
                 RecrutContext.GetContext().SaveChanges();
                 MessageBox.Show("Изменения сохранены!");
-            }
-            catch
-            {
-                MessageBox.Show("Заполните все необходимые поля");
-            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Заполните все необходимые поля");
+            //}
         }
     }
 }

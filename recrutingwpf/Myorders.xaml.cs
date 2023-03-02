@@ -21,7 +21,8 @@ namespace recrutingwpf
     public partial class Myorders : Page
     {
         public static Frame Frame { get; set; }
-        int Id;
+        public  int Id;
+        public Order order { get; set; }
         public Myorders(int id)
         {
             InitializeComponent();
@@ -31,30 +32,22 @@ namespace recrutingwpf
 
         }
 
+
+        
+
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Global.glawWindow.mainFrame.Navigate(new NewOrder(Id));
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Global.glavWin.mainFrame.Navigate(new NewOrder());
-        }
-
-        private void ListImage_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
             if (ListImage.SelectedItem != null)
             {
-                Order order= ListImage.SelectedItem as Order;
-                if (order.id == 0)
-                {
-                    Global.glavWin.mainFrame.Navigate(new NewOrder(order.id));
-
-
-
-                    RecrutContext.GetContext().SaveChanges();
-                    MessageBox.Show("Отклик удален");
-                }
+                if (order.id != 0)
+                    Global.glawWindow.mainFrame.Navigate(new NewOrder(Id,order.id)) ;
 
             }
         }
