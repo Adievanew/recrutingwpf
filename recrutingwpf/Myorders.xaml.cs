@@ -46,10 +46,12 @@ namespace recrutingwpf
         {
             if (ListImage.SelectedItem != null)
             {
-                if (order.id != 0)
-                    Global.glawWindow.mainFrame.Navigate(new NewOrder(Id,order.id)) ;
+                Order orderr = ListImage.SelectedItem as Order;
+                if (orderr.id != 0)
+                    Global.glawWindow.mainFrame.Navigate(new NewOrder(order.id, Id));
 
             }
+
         }
     }
 }

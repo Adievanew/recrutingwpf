@@ -40,7 +40,7 @@ namespace recrutingwpf
 
         private void Profile2_Checked(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
 

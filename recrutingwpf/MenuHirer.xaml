@@ -82,7 +82,7 @@
                 </Menu.ItemsPanel>
                 <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мой профиль"  Tag="&#xECA7;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile" Margin="0,0,-101.2,0" FontSize="16" Checked="Profile_Checked"></RadioButton>
                 <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мои работы" Tag="&#xECCD;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile1" Margin="0,0,-101.2,0" Checked="Profile1_Checked" ></RadioButton>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Вакансии" Tag="&#xF0E3;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile2" Margin="0,0,-101.2,0" Checked="Profile2_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Вакансии" Tag="&#xF0E3;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile2" Margin="0,0,-101.2,0" Checked="Profile2_Checked" RenderTransformOrigin="0.502,0.5" ></RadioButton>
                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Выйти" Tag="&#xE10F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile4" Margin="0,0,-101.2,0" Checked="Profile4_Checked" ></RadioButton>
 
             </Menu>

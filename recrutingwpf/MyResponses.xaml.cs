@@ -40,9 +40,6 @@ namespace recrutingwpf
                 if (response.id == 0)
                 {
                     RecrutContext.GetContext().response.Remove(response);
-
-
-
                     RecrutContext.GetContext().SaveChanges();
                     MessageBox.Show("Отклик удален");
                 }
