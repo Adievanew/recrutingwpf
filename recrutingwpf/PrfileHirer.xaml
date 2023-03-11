@@ -18,22 +18,22 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="244*"/>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="258*"/>
-            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="305*"/>
+            <ColumnDefinition Width="130*"/>
         </Grid.ColumnDefinitions>
-        <Image Source = "{Binding imageavatar}" HorizontalAlignment="Left" Height="160" Margin="7.8,9.6,0,0" VerticalAlignment="Top" Width="226" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
-        <Label Content="Электронная почта" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,34.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="150" Grid.ColumnSpan="2"/>
-        <Label Content="Адрес" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,41,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-2.062,0.446" Height="26" Width="60"/>
-        <Label Content="Описание" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,31.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Width="70" RenderTransformOrigin="-2.923,0.166"/>
-        <Label Content="Наименование" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,32,0,0" VerticalAlignment="Top" Height="26" Width="93"/>
-        <TextBox Grid.Column="3" Grid.Row=" 0" HorizontalAlignment="Left" Margin="36.8,32,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row=" 1"  HorizontalAlignment="Left" Margin="36.8,31.6,0,0" TextWrapping="Wrap" Text="{Binding email }" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row=" 2" HorizontalAlignment="Left" Margin="36.8,32,0,0" TextWrapping="Wrap" Text="{Binding adress }" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row=" 3" HorizontalAlignment="Left" Margin="36.8,10.4,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="203" Height="74"/>
-        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click_1" Grid.Column="3" HorizontalAlignment="Left" Margin="36.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="203" Height="46"/>
-        <Button Content="Изменить фото" Style="{StaticResource RoundCorner}" Click="Button_Click" HorizontalAlignment="Left" Margin="4.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="213" Height="46" Grid.Column="1"/>
+        <Image Source = "{Binding imageavatar}" HorizontalAlignment="Left" Height="200"  VerticalAlignment="Top" Width="200" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="19,90,0,0"/>
+        <Label Content="Электронная почта" Grid.Column="2" HorizontalAlignment="Left" Margin="9.6,34.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="116"/>
+        <Label Content="Адрес" Grid.Column="2" HorizontalAlignment="Left" Margin="9.6,41,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="-2.062,0.446" Height="26" Width="78"/>
+        <Label Content="Описание" Grid.Column="2" HorizontalAlignment="Left" Margin="9.6,31.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Width="88" RenderTransformOrigin="-2.923,0.166"/>
+        <Label Content="Наименование" Grid.Column="2" HorizontalAlignment="Left" Margin="9.6,32,0,0" VerticalAlignment="Top" Height="26" Width="111"/>
+        <TextBox Grid.Column="3" Grid.Row=" 0" HorizontalAlignment="Left" Margin="32.2,32,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" Width="203" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row=" 1"  HorizontalAlignment="Left" Margin="32.2,31.6,0,0" TextWrapping="Wrap" Text="{Binding email }" VerticalAlignment="Top" Width="203" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row=" 2" HorizontalAlignment="Left" Margin="32.2,32,0,0" TextWrapping="Wrap" Text="{Binding adress }" VerticalAlignment="Top" Width="203" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row=" 3" HorizontalAlignment="Left" Margin="32.2,10.4,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="203" Height="74"/>
+        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click_1" Grid.Column="3" HorizontalAlignment="Left" Margin="32.2,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="203" Height="46"/>
+        <Button Content="Изменить фото" Style="{StaticResource RoundCorner}" Click="Button_Click" HorizontalAlignment="Left" Margin="4.8,10.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="179" Height="46" Grid.Column="1"/>
 
     </Grid>
 

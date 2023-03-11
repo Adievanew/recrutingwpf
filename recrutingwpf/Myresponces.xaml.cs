@@ -26,14 +26,20 @@ namespace recrutingwpf
         public Myresponces(int id)
         {
             InitializeComponent();
-            var currentOrders = RecrutContext.GetContext().response.Where(p => p.OrderId == id).ToList(); ;
+            var currentOrders = RecrutContext.GetContext().orders.Where(p => p.hirerid  == id).ToList(); ;
             ListImage.ItemsSource = currentOrders;
             app = id;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (ListImage.SelectedItem != null)
+            {
+                Order order = ListImage.SelectedItem as Order;
+                if (order.id != 0)
+                Global.glawWindow.mainFrame.Navigate(new Applicants (order.id));
 
+            }
         }
     }
 }

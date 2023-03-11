@@ -74,20 +74,20 @@
     </Window.Resources>
     <Grid>
         <DockPanel >
-            <Menu Background="Gray"  DockPanel.Dock="Left" Margin="0,0,0,-0.4" Width="201" >
+            <Menu Background="Gray"  DockPanel.Dock="Left" Width="153" >
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мой профиль"  Tag="&#xECA7;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile" Margin="0,0,-191.6,0" FontSize="16" Checked="Profile_Checked"></RadioButton>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мои работы" Tag="&#xECCD;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile1" Margin="0,0,-190.2,0" Checked="Profile1_Checked" ></RadioButton>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Вакансии" Tag="&#xF0E3;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile2" Margin="0,0,-188.6,0" Checked="Profile2_Checked" ></RadioButton>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Отклики" Tag="&#xED0C;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile3" Margin="0,0,-188.6,0" Checked="Profile3_Checked" ></RadioButton>
-                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Выйти" Tag="&#xE10F;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile4" Margin="0,0,-188.6,0" Checked="Profile4_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мой профиль"  Tag="&#xECA7;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile" Margin="0,0,-130,0" FontSize="16" Checked="Profile_Checked"></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Мои работы" Tag="&#xECCD;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile1" Margin="0,0,-130,0" Checked="Profile1_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Вакансии" Tag="&#xF0E3;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile2" Margin="0,0,-130,0" Checked="Profile2_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Отклики" Tag="&#xED0C;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Profile3" Margin="0,0,-130,0" Checked="Profile3_Checked" ></RadioButton>
+                <RadioButton  Style="{DynamicResource HamburguerRadioButtonStyle}" Content="Выйти" Tag="&#xE10F;" VerticalAlignment="Stretch" x:Name="Profile4"  Checked="Profile4_Checked" Margin="0,0,-129.2,0" HorizontalAlignment="Left" Width="130"  />
 
             </Menu>
-            <Frame x:Name="mainFrame" Background="#FFB5D5CA" NavigationUIVisibility="Hidden" Margin="0,0,0,-0.4" Width="681"/>
+            <Frame x:Name="mainFrame" Background="WhiteSmoke"  NavigationUIVisibility="Hidden"  Width="634" FontSize="23" FontFamily="Wide Latin"  HorizontalAlignment="Center"   Content="Чтобы начать работу, &#xD;&#xA;заполните портфолио фрилансера &#xA;и добавьте примеры успешно выполненных заказов.&#xA;После укажите в личном профиле информацию. &#xA;Не забудьте упомянуть о ваших&#xD;&#xA;фриланс-кейсах, навыках, опыте и &#xA;добавить информацию о заказчиках, &#xD;&#xA;с которыми уже сотрудничали." />
         </DockPanel>
     </Grid>
 </Window>

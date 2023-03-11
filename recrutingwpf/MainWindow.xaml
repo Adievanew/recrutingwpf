@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:recrutingwpf"
         mc:Ignorable="d"
-        Title="Авторизация" Height="450" Width="800">
+        Title="Авторизация" Height="450" Width="800"  >
     <Grid >
-        <Image  Stretch="Fill"   />
+        <Image  Stretch="Fill" Source="C:\Users\Aigul\source\repos\recrutingwpf\recrutingwpf\Resourses\1674627552_top-fon-com-p-fon-dlya-prezentatsii-delovoi-stil-bloknot-1.jpg"  />
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
             <TextBlock Text="Логин"/>
             <TextBox x:Name="loginTB" Text=""/>

@@ -22,20 +22,18 @@ namespace recrutingwpf
     {
         public static Frame Frame { get; set; }
         public  int Id;
-        public Order order { get; set; }
+       
         public Myorders(int id)
         {
             InitializeComponent();
             var currentOrders = RecrutContext.GetContext().orders.Where(p => p.hirerid  == id).ToList(); ;
             ListImage.ItemsSource = currentOrders;
             Id= id;
+              
 
         }
 
 
-        
-
-       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Global.glawWindow.mainFrame.Navigate(new NewOrder(Id));
@@ -46,8 +44,8 @@ namespace recrutingwpf
         {
             if (ListImage.SelectedItem != null)
             {
-                Order orderr = ListImage.SelectedItem as Order;
-                if (orderr.id != 0)
+                Order order = ListImage.SelectedItem as Order;
+                if (order.id != 0)
                     Global.glawWindow.mainFrame.Navigate(new NewOrder(order.id, Id));
 
             }

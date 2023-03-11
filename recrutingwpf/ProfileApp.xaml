@@ -3,11 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:recrutingwpf"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProfileApp"
-      Background="White" >
+      Background="WhiteSmoke" 
+      >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,31 +25,31 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="239*"/>
-            <ColumnDefinition Width="120*"/>
-            <ColumnDefinition Width="262*"/>
-            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="28*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="ImageBox"  Source = "{Binding imageavatar}"  HorizontalAlignment="Left" Height="148" Margin="8,7.4,0,0" VerticalAlignment="Top" Width="203" Grid.Row="1" Grid.RowSpan="4" Grid.Column="1"/>
+        <Image x:Name="ImageBox"  Source = "{Binding imageavatar}"  HorizontalAlignment="Left" Height="214" Margin="8,7.4,0,0" VerticalAlignment="Top" Width="236" Grid.Row="1" Grid.Column="1" Grid.RowSpan="5"/>
 
 
-        <Label Content="Электронная почта" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,11.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="134" Grid.ColumnSpan="2"/>
-        <Label Content="Специальность" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,9.4,0,0" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-2.062,0.446" Height="26" Width="134" Grid.ColumnSpan="2"/>
-        <Label Content="Описание" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,18.4,0,0" Grid.Row="7" VerticalAlignment="Top" Height="25" Width="70" RenderTransformOrigin="-2.923,0.166"/>
-        <Label Content="Имя" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,14,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515"/>
-        <TextBox Grid.Column="3" Grid.Row=" 0" HorizontalAlignment="Left" Margin="33.8,14,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row="3"  HorizontalAlignment="Left" Margin="33.8,10.4,0,0" TextWrapping="Wrap" Text="{Binding email }" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Margin="33.8,11.4,0,0" TextWrapping="Wrap" Text="{Binding job }" VerticalAlignment="Top" Width="203" Height="26"/>
-        <TextBox Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Margin="33.8,10.4,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="203" Height="42" Grid.RowSpan="2"/>
-        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click" Grid.Column="3" HorizontalAlignment="Left" Margin="33.8,29.4,0,0" Grid.Row="8" VerticalAlignment="Top" Width="203" Height="46"/>
-        <Button Content="Изменить фото" Style="{StaticResource RoundCorner}" Click="EditImage_Click" HorizontalAlignment="Left" Margin="8,29.4,0,0" Grid.Row="8" VerticalAlignment="Top" Width="213" Height="46" Grid.Column="1"/>
-        <Label Content="Фамилия" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,3.4,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515" Grid.Row="1"/>
-        <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Margin="33.8,9.4,0,0" TextWrapping="Wrap" Text="{Binding surname}" VerticalAlignment="Top" Width="203" Height="26"/>
-        <Label Content="Отчество" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,6.8,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515" Grid.Row="2"/>
-        <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="33.8,6.8,0,0" TextWrapping="Wrap" Text="{Binding patronomic}" VerticalAlignment="Top" Width="203" Height="26"/>
-        <Label Content="Дата рождения" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,1.4,0,6.6" Grid.Row="4" Width="134" Grid.ColumnSpan="2"/>
-        <DatePicker Grid.Row="4" Grid.Column="3" SelectedDate="{Binding birthday}" Margin="33.8,1.4,25.6,0.6"/>
-        <Label Content="Образование" Grid.Column="2" HorizontalAlignment="Left" Margin="26.8,49.4,0,4.6" Grid.Row="5" RenderTransformOrigin="-2.062,0.446" Width="134" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Margin="33.8,5.8,0,0" TextWrapping="Wrap" Text="{Binding education}" VerticalAlignment="Top" Width="203" Height="26"/>
+        <Label Content="Электронная почта" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,11.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="109"/>
+        <Label Content="Специальность" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,9.4,0,0" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="-2.062,0.446" Height="26" Width="134"/>
+        <Label Content="Описание" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,18.4,0,0" Grid.Row="7" VerticalAlignment="Top" Height="25" Width="70" RenderTransformOrigin="-2.923,0.166"/>
+        <Label Content="Имя" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,14,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515"/>
+        <TextBox Grid.Column="3" Grid.Row=" 0" HorizontalAlignment="Left" Margin="23.4,14,0,0" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Top" Width="216" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row="3"  HorizontalAlignment="Left" Margin="23.4,10.4,0,0" TextWrapping="Wrap" Text="{Binding email }" VerticalAlignment="Top" Width="216" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Margin="23.4,11.4,0,0" TextWrapping="Wrap" Text="{Binding job }" VerticalAlignment="Top" Width="216" Height="26"/>
+        <TextBox Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Margin="23.4,10.4,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="216" Height="42" Grid.RowSpan="2"/>
+        <Button Content="Сохранить" Style="{StaticResource RoundCorner}" Click="Button_Click" Grid.Column="3" HorizontalAlignment="Left" Margin="70.4,29.4,0,0" Grid.Row="8" VerticalAlignment="Top" Width="131" Height="46"/>
+        <Button Content="Изменить фото" Style="{StaticResource RoundCorner}" Click="EditImage_Click" HorizontalAlignment="Left" Margin="8,29.4,0,0" Grid.Row="8" VerticalAlignment="Top" Width="189" Height="46" Grid.Column="1"/>
+        <Label Content="Фамилия" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,3.4,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515" Grid.Row="1"/>
+        <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" Margin="23.4,9.4,0,0" TextWrapping="Wrap" Text="{Binding surname}" VerticalAlignment="Top" Width="216" Height="26"/>
+        <Label Content="Отчество" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,6.8,0,0" VerticalAlignment="Top" Height="26" Width="93" RenderTransformOrigin="0.585,-0.515" Grid.Row="2"/>
+        <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="23.4,6.8,0,0" TextWrapping="Wrap" Text="{Binding patronomic}" VerticalAlignment="Top" Width="216" Height="26"/>
+        <Label Content="Дата рождения" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,1.4,0,6.6" Grid.Row="4" Width="134"/>
+        <DatePicker Grid.Row="4" Grid.Column="3" SelectedDate="{Binding birthday}" Margin="23.4,1.4,87,0.6"/>
+        <Label Content="Образование" Grid.Column="2" HorizontalAlignment="Left" Margin="29.4,49.4,0,4.6" Grid.Row="5" RenderTransformOrigin="-2.062,0.446" Width="134" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Margin="23.4,5.8,0,0" TextWrapping="Wrap" Text="{Binding education}" VerticalAlignment="Top" Width="216" Height="26"/>
     </Grid>
 </Page>

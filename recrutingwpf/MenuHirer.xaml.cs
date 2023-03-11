@@ -40,7 +40,7 @@ namespace recrutingwpf
 
         private void Profile2_Checked(object sender, RoutedEventArgs e)
         {
-            
+            mainFrame.Navigate(new Myresponces(Id)); 
         }
 
 
@@ -50,5 +50,7 @@ namespace recrutingwpf
             MainWindow m = new MainWindow();
             m.Show();
         }
+
+       
     }
 }

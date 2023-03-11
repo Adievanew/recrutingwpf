@@ -37,7 +37,7 @@ namespace recrutingwpf
             if (ListImage.SelectedItem != null)
             {
                 Response response = ListImage.SelectedItem as Response;
-                if (response.id == 0)
+                if (response.id != 0)
                 {
                     RecrutContext.GetContext().response.Remove(response);
                     RecrutContext.GetContext().SaveChanges();
